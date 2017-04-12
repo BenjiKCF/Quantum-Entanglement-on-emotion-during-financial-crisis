@@ -3,8 +3,9 @@
 The purpose of this ipython notebook is to apply the theory of Quantum entanglement to find out trader emotion in the stock market and the trader's daily loss.
 
 # Methodology
-With the recent breakthrough in quantum physics, it has been verified that pairs or groups of particles can interact in a way that the quantum state of each particle can be dependent of the others, regardless of the distance separated between the particles. The quantum state is viewed as a system.
-By using the peculiar stock price during internet bubble between 2000-2002 and US housing bubble between 2007-2008, we applied quantum mechanics to entangle intangible information such as human thought to the trader's behaviour in order to get a better understanding of the financial market.
+With the recent breakthrough in quantum physics, it has been verified that pairs or groups of particles can interact in a way that the quantum state of each particle can be dependent of the others, regardless of the distance separated between the particles. The quantum state is viewed as a system. 
+Human thought is always hard to be quantified and various attempts had been made to quantify it such as using sentiment analysis, but the dissemination for human thought are hard to simulate. In this example, we are going to apply quantum entanglement to the wide spread emotion "Fear" during the financial crisis so that the spread of emotion can be built into the model.
+By using the peculiar stock price during internet bubble between 2000-2002 and US housing bubble between 2007-2008, we entangle intangible information such as human thought in order to get a better understanding of the financial market as well as analyzing the performance of the trader.
 
 # Result
 We plotted the human engagement and the daily loss in the market from 2000 to 2017. 
