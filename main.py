@@ -65,6 +65,3 @@ plt.ylabel('Daily Loss [%]')
 plt.show()
  
 plt.savefig('fig02.png', format='png')
-
-# Detecting Human Fear in Electronic Trading
-# (c) 2016 Pawel Lachowicz, QuantAtRisk.com
