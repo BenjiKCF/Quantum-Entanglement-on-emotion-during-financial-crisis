@@ -7,15 +7,21 @@ from scipy import stats
  
 data = web.DataReader("^gspc", data_source='yahoo', start='1960-01-01', 
           end='1989-12-31')['Open','High','Low','Close']
- 
+# Creating different Columns of SP500
 data['OC'] = abs(data.Open - data.Close)
 data['HL'] = abs(data.High - data.Low)
+# The difference of open & close / the difference of high and low
+# Higher = closing price is much different
 data['Ratio'] = data.OC/data.HL
-data['Loss'] = (data.Close/data.Open - 1)*100  # daily loss in percent
- 
+# Daily loss %
+data['Loss'] = (data.Close/data.Open - 1)*100
+# Only 0.95 high difference and negative loss
 events = data[(data.Ratio > 0.95)  & (data.Loss < 0)]
 print(events.shape[0])
 
+# Pearson correlation coefficient of loss % and volume and the p-value for testing non-correlation
+# 1 is total positive linear correlation, 0 is no linear correlation, and −1 is total negative linear correlation
+# P value = probability that would happen
 pr, pvalue = pearsonr(events.Loss.values, events.Volume.values)
 slope, intercept, r_value, p_value, std_e = stats.linregress(events.Loss.values,
                                                   events.Volume.values)
